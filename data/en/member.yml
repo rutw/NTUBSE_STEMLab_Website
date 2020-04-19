@@ -1,0 +1,218 @@
+############################### team ############################
+member:
+  enable : true
+  title : Lab Mamber
+  lab_member :
+           
+    - name : 顧尚真 
+      eng_name : Shang-Chen Ku
+      image_webp : images/team/Shang-Chen-Ku.webp
+      image : images/team/Shang-Chen-Ku.jpg
+      designation : 研究助理
+      phone : 02-33663491
+      content : 
+      social :
+        - icon : ti-email # themify icon pack : https://themify.me/themify-icons
+          link : "mailto:scku208@gmail.com"
+      diploma : 
+        - 國立臺灣大學 生物環境系統工程學系 碩士
+      workexp :
+        - 國立臺灣大學 生物環境系統工程研究所 研究助理
+      research :
+        - 地理資訊系統
+        - 序率分析及時空地理統統計
+        
+          
+    - name : 莊紹榕
+      eng_name : 
+      image_webp : images/team/莊紹榕.webp
+      image : images/team/莊紹榕.jpg
+      designation : 研究助理
+      phone : 02-33663491
+      content : 
+      social :
+        - icon : ti-email # themify icon pack : https://themify.me/themify-icons
+          link : "mailto:csy1992@ntu.edu.tw"
+      diploma : 
+        - 國立臺灣大學 生物環境系統工程學系 碩士
+        - 國立臺灣大學 生物環境系統工程學系 學士
+      workexp :
+      research :
+        - 地理資訊系統
+        - 地下水資源
+        
+    - name : 周宗徹 
+      eng_name : Simon Chou
+      image_webp : images/team/Simon-Chou.webp
+      image : images/team/Simon-Chou.jpg
+      designation : 研究助理
+      phone : 02-33663491
+      content : 
+      social :
+        - icon : ti-email # themify icon pack : https://themify.me/themify-icons
+          link : "mailto:ccc2017@ntu.edu.tw"
+      diploma : 
+        - Post graduate diploma, School of Environment Faculty of Science, University of Auckland
+      workexp :
+      research :
+        - Numeric modeling
+   
+    - name : 吳尚威 
+      eng_name : Shang-wei Wu
+      image_webp : images/team/Shang-wei-Wu.webp
+      image : images/team/Shang-wei-Wu.jpg
+      designation : 研究助理
+      phone : 02-33663491
+      content : 
+      social :
+        - icon : ti-email # themify icon pack : https://themify.me/themify-icons
+          link : "mailto:b01611008@ntu.edu.tw"
+      diploma : 
+        - 國立臺灣大學 機械工程學系 學士
+      workexp :
+      research :
+        - 微流道熱流分析
+        - 環境資料時空間呈現
+        - 氣浮車、氣動車製作 風險評估
+          
+    - name : 李杰翰 
+      eng_name : Chieh-Han Lee
+      image_webp : images/team/Chieh-Han-Lee.webp
+      image : images/team/Chieh-Han-Lee.jpg
+      designation : 博士候選人
+      phone : 02-33663491
+      content : 
+      social :      
+        - icon : ti-email # themify icon pack : https://themify.me/themify-icons
+          link : "mailto:d03622009@ntu.edu.tw"
+      diploma : 
+        - 美國北卡羅萊納州大學教堂山分校 碩士
+        - 國立臺灣大學 生物環境系統工程系 學士
+      workexp :
+      research :
+        - 環境資料統計分析
+        - 時空間地理統計分析
+        - 風險評估
+
+          
+    - name : 徐昶亘 
+      eng_name : Chang-Hsuan Hsu
+      image_webp : images/team/Chang-Hsuan-Hsu.webp
+      image : images/team/Chang-Hsuan-Hsu.jpg
+      designation : 碩士班學生
+      phone : 02-33663491
+      content : 
+      social :
+        - icon : ti-email # themify icon pack : https://themify.me/themify-icons
+          link : "mailto:r05622007@ntu.edu.tw"
+      diploma : 
+        - 國立臺灣大學 生物環境系統工程系 學士
+      workexp :
+      research :
+        - 地下水資源規劃
+
+              
+    - name : 李佳穎 
+      eng_name : Chia-Ying Lee
+      image_webp : images/team/Chia-Ying-Lee.webp
+      image : images/team/Chia-Ying-Lee.jpg
+      designation : 碩士班學生
+      phone : 02-33663491
+      content : 
+      social :
+        - icon : ti-email # themify icon pack : https://themify.me/themify-icons
+          link : "mailto:r05622029@ntu.edu.tw"
+      diploma : 
+        - 國立成功大學 水利及海洋工程學系 學士
+      workexp :
+      research :
+        - 灌溉配水研究
+
+                    
+    - name : 洪嘉鴻 
+      eng_name : Chia-Hung Hung
+      image_webp : images/team/Chia-Hung-Hung.webp
+      image : images/team/Chia-Hung-Hung.jpg
+      designation : 碩士班學生
+      phone : 02-33663491
+      content : 
+      social :
+        - icon : ti-email # themify icon pack : https://themify.me/themify-icons
+          link : "mailto:r06622006@ntu.edu.tw"
+      diploma : 
+        - 國立臺灣大學 生物環境系統工程學系 學士
+        - 國立臺灣大學 地理環境資源學系 學士
+      workexp :
+      research :
+        - 環境資料統計分析
+        - 灌溉配水分析
+
+
+                    
+    - name : 陳錦麟 
+      eng_name : Terry, Kam Lon-Chan
+      image_webp : images/team/Kam-Lon-Chan.webp
+      image : images/team/Kam-Lon-Chan.jpg
+      designation : 碩士班學生
+      phone : 02-33663491
+      content : 
+      social :
+        - icon : ti-email # themify icon pack : https://themify.me/themify-icons
+          link : "mailto:terry931110@gmail.com"
+      diploma : 
+        - 國立中央大學 地球科學系 學士
+      workexp :
+      research :
+        - 遙測資料分析
+        
+
+                             
+    - name : 曾華廷
+      eng_name : Hua-Ting Tseng
+      image_webp : images/team/Hua-Ting-Tseng.webp
+      image : images/team/Hua-Ting-Tseng.jpg
+      designation : 碩士班學生
+      phone : 02-33663491
+      content : 
+      social :
+        - icon : ti-email # themify icon pack : https://themify.me/themify-icons
+          link : "mailto:alex84026066@gmail.com"
+      diploma : 
+        -  國立成功大學 水利與海洋工程學系 學士
+      workexp :
+      research :
+        - 地下水
+        - 遙測影像處理與分析
+                             
+    - name : 林致弘 
+      eng_name : Chih-Hung Lin
+      image_webp : images/team/Chih-Hung-Lin.webp
+      image : images/team/Chih-Hung-Lin.jpg
+      designation : 碩士班學生
+      phone : 02-33663491
+      content : 
+      social :
+        - icon : ti-email # themify icon pack : https://themify.me/themify-icons
+          link : "mailto:r06622026@ntu.edu.tw"
+      diploma : 
+        - 國立成功大學水利及海洋工程學系 學士
+      workexp :
+      research :
+        - 灌溉配水
+
+                             
+    - name : 蔡孟傑 
+      eng_name : Meng-Chieh Thai
+      image_webp : images/team/avatar.webp
+      image : images/team/avatar.jpg
+      designation : 碩士班學生
+      phone : 02-33663491
+      content : 
+      social :
+        - icon : ti-email # themify icon pack : https://themify.me/themify-icons
+          link : "mailto:r06622038@ntu.edu.tw"
+      diploma : 
+        - 國立臺灣大學 地質科學系 學士
+      workexp :
+      research :
+        - 氣候變遷之水文評估

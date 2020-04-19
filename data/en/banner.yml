@@ -1,0 +1,13 @@
+############################### Banner ################################
+banner:
+  enable : true
+  bg_image_webp : "images/backgrounds/banner.webp"
+  bg_image : "images/backgrounds/banner.jpg"
+  icon : "" # themify icon pack : https://themify.me/themify-icons
+  title : "歡迎來到 STEMLab！"
+  content_1 : "這裡是余化龍研究室 STEMLab 的部落格"
+  content_2 : "不定期為您提供本研究室的相關訊息"
+  button:
+    enable : true
+    label : "Contact Us"
+    link : "#contact"

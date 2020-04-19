@@ -1,0 +1,11 @@
+############################# call to action ##############################
+welcome:
+  enable : true
+  bg_image : "images/backgrounds/welcome.jpg"
+  bg_image_webp : "images/backgrounds/welcome.webp"
+  title : "歡迎加入我們！"
+  content : "本研究團隊擁有良好研究風氣及跨領域之研究，歡迎有興趣的同學直接與老師聯絡。"
+  button:
+    enable : true
+    label : "聯絡我們"
+    link : "#contact"

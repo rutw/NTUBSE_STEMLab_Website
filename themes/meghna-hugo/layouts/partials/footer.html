@@ -1,0 +1,46 @@
+{{"<!-- end Contact Area -->" | safeHTML}}
+<footer id="footer" class="section-bg">
+	<div class="container">
+		<div class="row wow fadeInUp" data-wow-duration="500ms">
+			<div class="col-xl-12">
+				{{"<!-- copyright -->" | safeHTML}}
+				<div class="copyright text-center">
+					<a href="{{ .Site.BaseURL | absLangURL }}">
+						<img class = "my-auto"  src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" style="max-height:50px;">
+					</a>
+					<br>
+					<p>Copyright &copy; {{ now.Year }} <a href="http://www.bse.ntu.edu.tw/"  target="_blank">NTUBSE</a> STEMLab - SpatioTemporal Environmental InforMatics Laboratory - </p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+{{"<!-- /footer -->" | safeHTML}}
+
+{{ "<!-- JS Plugins -->" | safeHTML }}
+{{ range .Site.Params.plugins.js}}
+<script src="{{ .link | absURL }}"></script>
+{{ end }}
+
+{{ "<!-- Main Script -->" | safeHTML }}
+{{ $script := resources.Get "js/script.js" | minify}}
+<script src="{{ $script.Permalink }}"></script>
+
+{{ "<!-- google analitycs -->" | safeHTML }}
+{{ with .Site.Params.google_analitycs_id }}
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', '{{ . }}', 'auto');
+  ga('send', 'pageview');
+</script>
+{{ end }}

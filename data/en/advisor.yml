@@ -1,0 +1,35 @@
+################################# Skill ##################################
+advisor:
+  enable : true
+  title : Lab Advisor
+  image : images/team/Hwa-Lung-Yu.jpg
+  advisor_name : 余化龍
+  advisor_eng_name : Hwa-Lung Yu
+  designation : 國立臺灣大學生物環境系統工程學系 教授
+  content : 
+  diploma :
+    - 美國北卡羅萊納州大學教堂山分校 博士
+    - 國立台灣大學 農業工程 碩士
+    - 國立台灣大學 農業工程 學士
+  workexp :
+    - 美國聖地牙哥大學博士後研究
+    - 美國北卡羅萊納大學教堂山分校博士後研究
+    - 專技高考水利技師
+  research:
+    - 災害風險評估
+    - 健康與生態風險分析
+    - 環境生態動態時空分析
+    - 地理資訊系統
+    - 序率分析及時空地理統計
+    - 氣候與環境變遷對水文環境之影響
+  
+  contact_details :
+    - icon : ti-user # themify icon pack : https://themify.me/themify-icons
+      info : "Google Scholar:　https://scholar.google.com/citations?user=X3zGlpIAAAAJ&hl=en"
+
+    - icon : ti-email # themify icon pack : https://themify.me/themify-icons
+      info : "Email: hlyu@ntu.edu.tw"
+
+    - icon : ti-mobile # themify icon pack : https://themify.me/themify-icons
+      info : "Phone: 02-33663454"
+ 

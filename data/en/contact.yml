@@ -1,0 +1,23 @@
+############################## Contact #############################
+contact:
+  enable : true
+  title : Contact Us
+  subtitle : Details
+  content : 本研究團隊擁有良好研究風氣及跨領域之研究，歡迎有興趣的同學於上班時間與老師聯絡。
+
+  contact_details :
+    - icon : ti-location-pin # themify icon pack : https://themify.me/themify-icons
+      info : "聯絡地址：10617 臺北市大安區羅斯福路四段一號 國立臺灣大學生物環境系統工程學系"
+
+    - icon : ti-location-pin # themify icon pack : https://themify.me/themify-icons
+      info : "Address: Department of Bioenvironmental Systems Engineering, National Taiwan University, No. 1, Sec. 4, Roosevelt Rd., Taipei 10617, Taiwan"
+            
+    - icon : ti-mobile # themify icon pack : https://themify.me/themify-icons
+      info : "聯絡方式：02-33663454"
+      
+    - icon : ti-bag # themify icon pack : https://themify.me/themify-icons
+      info : "上班時間：週一至週五 09:00-18:00"
+
+    - icon : ti-world # themify icon pack : https://themify.me/themify-icons
+      info : "國立臺灣大學生物環境系統工程學系：http://www.bse.ntu.edu.tw/"
+  

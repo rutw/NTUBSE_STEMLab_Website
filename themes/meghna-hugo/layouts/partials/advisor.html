@@ -1,0 +1,74 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.advisor.advisor.enable }}
+{{ with $data.advisor.advisor }}
+{{"<!-- advisor -->" | safeHTML }}
+<section id="advisor" class="parallax-section section section-bg overly">
+	<div class="container">
+		<div class="row">
+			{{"<!-- section title -->" | safeHTML }}
+			<div class="col-lg-12">
+				<div class="title text-center">
+					<h2>{{ with .title }} {{ index (split . " ") 0 }} {{ end }}<span class="color">
+							{{ with .title }} {{ index (split . " ") 1 }} {{ end }} </span></h2>
+					<div class="border-meghna"></div>
+				</div>
+			</div>
+			{{"<!-- /section title -->" | safeHTML }}
+		</div>
+		<div class="row">
+			<div class="col-lg-6">				
+				{{ with .image }}
+				<img class="img-fluid" src="{{ . | absURL }}" alt="image">
+				{{ end }}
+				<div class="pt-5">					
+					<div class="con-info clearfix">
+						<i class="ti-user"></i>
+						<span>Citations: <a href="https://scholar.google.com/citations?user=X3zGlpIAAAAJ&amp;hl=en"  target="_blank">Google Scholar</a></span>
+					</div>					
+					<div class="con-info clearfix">
+						<i class="ti-email"></i>
+						<span>Email: <a href="mailto:hlyu@ntu.edu.tw">hlyu@ntu.edu.tw</a></span>
+					</div>					
+					<div class="con-info clearfix">
+						<i class="ti-mobile"></i>
+						<span>Phone: 02-33663454</span>
+					</div>
+					
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<h2>{{ .advisor_name | markdownify }}</h2>
+				<h3>{{ .advisor_eng_name | markdownify }}</h3>
+				<h4>{{ .designation | markdownify }}</h4>
+				<p> {{ .content | markdownify }}</p>
+				<ul class="list-unstyled">
+					<li>學歷
+						<ul>
+						{{ range .diploma }}
+							<li>{{ . }}</li>
+						{{ end }}
+						</ul>
+					</li>
+					<li class="mt-1">經歷簡述：
+						<ul>
+						{{ range .workexp }}
+							<li>{{ . }}</li>
+						{{ end }}
+						</ul>
+					</li>
+					<li class="mt-1">研究領域：
+						<ul>
+						{{ range .research }}
+							<li>{{ . }}</li>
+						{{ end }}
+						</ul>
+					</li>					
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+{{"<!-- /advisor -->" | safeHTML }}
+{{ end }}
+{{ end }}

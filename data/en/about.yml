@@ -1,0 +1,26 @@
+############################# about ###################################
+about:
+  enable : true
+  image : images/about/一日遊1024x578.jpg
+  image_webp : images/about/一日遊1024x578.jpg
+  section_title : About Us
+  title : 歡迎來到時空環境模式研究室！
+  content : "時空環境模式研究室 (**S**patio**T**emporal **E**nvironmental infor**M**atics **Lab**oratory, STEMLab) 由國立臺灣大學生物環境系統工程學系余化龍教授帶領與指導，研究方向為將結合統計、資訊及數值模式，各式不同的時空間資料分析技術應用於環境科學領域。主要研究方向為："
+  content_2 : "時空環境模式研究室以資料分析為基礎出發提供環境科學領域不同於工程面向的觀點。隨著資料的普及化與未來面臨大數據的環境，本研究室首重統計分析與程式語言兩種在資料分析領域相輔相成的能力。"
+  content_3 : "目前研究室所執行計畫非常廣泛，包括水文模式分析、風險評估和時空間推估與特徵分析，合作對象來自土木、數學、大氣、公衛與醫學等不同領域的專家學者。"
+  feature_item : 
+      # feature item loop
+    - title : 環境時空推估
+      icon : ti-world # themify icon pack : https://themify.me/themify-icons
+      # content :   
+      
+      # feature item loop
+    - title : 環境資料分析
+      icon : ti-panel # themify icon pack : https://themify.me/themify-icons
+      # content :
+
+      # feature item loop
+    - title : 環境風險評估
+      icon : ti-stats-up # themify icon pack : https://themify.me/themify-icons
+      # content :
+      
