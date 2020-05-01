@@ -1,7 +1,7 @@
 ############################### team ############################
 member:
   enable : true
-  title : Lab Mamber
+  title : Lab Member
   lab_member :
            
     - name : 顧尚真 

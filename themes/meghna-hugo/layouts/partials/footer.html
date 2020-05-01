@@ -1,5 +1,5 @@
 {{"<!-- end Contact Area -->" | safeHTML}}
-<footer id="footer" class="section-bg">
+<footer id="footer" class="section bg-one" style="padding: 0px 0;">
 	<div class="container">
 		<div class="row wow fadeInUp" data-wow-duration="500ms">
 			<div class="col-xl-12">
@@ -21,6 +21,14 @@
 {{ range .Site.Params.plugins.js}}
 <script src="{{ .link | absURL }}"></script>
 {{ end }}
+
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js"></script>
+	<!-- and it's easy to individually load additional languages -->
+	<script charset="UTF-8"
+	src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/languages/go.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
 
 {{ "<!-- Main Script -->" | safeHTML }}
 {{ $script := resources.Get "js/script.js" | minify}}

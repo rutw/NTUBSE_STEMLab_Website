@@ -15,7 +15,8 @@ html {
 body {
   background-color: #353b43;
   font-family: "Anaheim", sans-serif;
-  color: #737f8a;
+  /*color: #737f8a;*/
+  color: #afbac4; /*內文顏色*/
   -webkit-font-smoothing: antialiased;
 }
 
@@ -27,7 +28,7 @@ h5,
 h6 {
   font-weight: 400;
   font-family: "Quattrocento Sans","Noto Sans TC Black" sans-serif;
-  color: #afbac4;
+  color: #fff; /*標題顏色*/
 }
 
 p {

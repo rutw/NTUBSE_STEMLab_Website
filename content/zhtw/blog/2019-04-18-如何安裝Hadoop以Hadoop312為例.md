@@ -17,7 +17,7 @@ wget http://apache.stu.edu.tw/hadoop/common/hadoop-3.1.2/hadoop-3.1.2.tar.gz
 
 等待下載完成
 
-![](/images/blog/Hadoop/1.png?width=20pc)
+![](/images/blog/Hadoop/1.png)
 
 並解壓縮：
 
@@ -37,7 +37,7 @@ sudo dnf install java-11-openjdk
 
 設定 PATH
 
-![](/images/blog/Hadoop/2.png =100x20)
+![](/images/blog/Hadoop/2.png)
 
 在下指令：
 

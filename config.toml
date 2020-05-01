@@ -92,7 +92,7 @@ post_share = false
 # preloader
 [params.preloader]
 enable = true
-preloader = "images/logo/stemlab-bldg-white-logo.png"
+preloader = "images/logo/Ellipsis-1.5s-200px.svg"
 
 ################################ Language ########################
 [Languages.en]

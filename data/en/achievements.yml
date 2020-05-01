@@ -1,0 +1,36 @@
+################################# Service #################################
+achievements:
+  enable : true
+  title : Research Achievements
+  achievements_item :
+    # service item loop
+    - name : STAR-BME
+      icon : ti-world # themify icon pack : https://themify.me/themify-icons
+      content : Space-Time Analytics and Rendering tool – Bayesian Maximum Entropy
+      link : "https://stemlab.bse.ntu.edu.tw/wordpress/starbme/"
+      
+    # service item loop
+    - name : STAMPS
+      icon : ti-layout # themify icon pack : https://themify.me/themify-icons
+      content : A Python package to run Spatial Temporal Analysis and Mapping Python Suite. Click to view our Gitlab
+      link : "https://gitlab.com/STEMLabTW/stamps"
+      
+    # service item loop
+    - name : 雨災平台建置
+      icon : ti-blackboard # themify icon pack : https://themify.me/themify-icons
+      content : 淹水警戒計算平台 - ET2020
+      link : "http://140.112.76.215/STEMLab/rainfall_platform/login"
+      
+    # service item loop
+    - name : 空氣盒子
+      icon : ti-palette # themify icon pack : https://themify.me/themify-icons
+      content : 空氣盒子累計圖
+      link : "http://140.112.76.215/STEMLab/air_box/"
+
+    # service item loop
+    - name : 時空間繪圖
+      icon : ti-package # themify icon pack : https://themify.me/themify-icons
+      content : 時空間繪圖
+      link : "http://140.112.76.215/STEMLab/stdraw/"
+
+   

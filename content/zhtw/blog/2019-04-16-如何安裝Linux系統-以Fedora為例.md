@@ -40,7 +40,7 @@ Standard Partition，/boot/swap 空間如圖設定（請盡量用 EXT4 格式）
 
 更新指令
 
-```toml
+```
 sudo dnf update -y
 ```
 
