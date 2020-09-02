@@ -22,22 +22,17 @@
 					{{ end }}
 
 					{{ else }}
-
 					{{ range .Site.Menus.main }}
 					<li class="nav-item"><a class="nav-link" href="{{ $.Site.BaseURL | relLangURL }}#{{ .URL }}">{{ .Name }}</a>
 					</li>
 					{{ end }}
 					{{ end }}
 					
-
 					{{ range .Site.Menus.static }}
 					<li class="nav-item"><a class="nav-link" target="_blank" href="{{ .URL }}">{{ .Name }}</a>
 					</li>
-					{{ end }}
-					
-				</ul>
-			
-			
+					{{ end }}	
+				</ul>			
 			</div>
 		</nav>
 	</div>

@@ -2,11 +2,11 @@
 
 {{ if $data.advisor.advisor.enable }}
 {{ with $data.advisor.advisor }}
-{{"<!-- START LAB ADVISOR -->" | safeHTML }}
+{{"<!-- START LAB ADVISOR SECTION -->" | safeHTML }}
 <section id="advisor" class="parallax-section section">
 	<div class="container">
+		{{"<!-- START LAB ADVISOR title -->" | safeHTML }}
 		<div class="row">
-			{{"<!-- START LAB ADVISOR title -->" | safeHTML }}
 			<div class="col-lg-12">
 				<div class="title text-center">
 					<h2>{{ with .title }} {{ index (split . " ") 0 }} {{ end }}<span class="color">
@@ -14,9 +14,10 @@
 					<div class="border-meghna"></div>
 				</div>
 			</div>
-			{{"<!-- END LAB ADVISOR title -->" | safeHTML }}
 		</div>
-		<!-- START LAB ADVISOR content -->
+		{{"<!-- END LAB ADVISOR title -->" | safeHTML }}
+
+		{{"<!-- START LAB ADVISOR content -->" | safeHTML }}
 		<div class="row">
 			<div class="col-lg-6">				
 				{{ with .image }}
@@ -68,9 +69,11 @@
 				</ul>
 			</div>
 		</div>
-		<!-- END LAB ADVISOR content -->
+		{{"<!-- END LAB ADVISOR content -->" | safeHTML }}
+
 	</div>
 </section>
 {{"<!-- END LAB ADVISOR -->" | safeHTML }}
+
 {{ end }}
 {{ end }}

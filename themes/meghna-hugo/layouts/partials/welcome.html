@@ -2,7 +2,7 @@
 
 {{ if $data.welcome.welcome.enable}}
 {{ with $data.welcome.welcome}}
-{{"<!-- Start Call To Action -->" | safeHTML}}
+{{"<!-- START WELCOME SECTION -->" | safeHTML}}
 <section id="welcome" class="call-to-action section-sm bg-1 overly" style='background-image: url("{{ .bg_image_webp | absURL }}");'>
 	<!-- this image is for trigger this section fallback background image -->
 	<img style="display: none;  -webkit-filter:brightness(.5);" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url({{ .bg_image | absURL }})'" src="{{ .bg_image_webp | absURL }}" />
@@ -20,6 +20,6 @@
 		</div>
 	</div>
 </section>
-{{"<!-- Start Services Section -->" | safeHTML}}
+{{"<!-- END WELCOME -->" | safeHTML}}
 {{ end }}
 {{ end }}

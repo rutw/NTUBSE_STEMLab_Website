@@ -2,9 +2,9 @@
 
 {{ if $data.banner.banner.enable }}
 {{ with $data.banner.banner }}
-{{"<!-- Welcome Slider-->" | safeHTML}}
+{{"<!-- START BANNER SECTION -->" | safeHTML}}
 <section class="hero-area" style='background-image: url("{{ .bg_image_webp | absURL }}")'>
-	<!-- this image is for trigger this section fallback background image -->
+	{{"<!-- this image is for trigger this section fallback background image -->" | safeHTML}}
 	<img style="display: none;" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url({{ .bg_image | absURL }})'" src="{{ .bg_image_webp | absURL }}" />
 
 	<div class="block">
@@ -22,7 +22,9 @@
 		{{ end }}
 		{{ end }}
 	</div>
+
 </section>
-{{"<!-- /Welcome Slider-->" | safeHTML}}
+{{"<!-- END BANNER -->" | safeHTML}}
+
 {{end}}
 {{end}}

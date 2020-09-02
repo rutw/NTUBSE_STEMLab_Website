@@ -1,10 +1,10 @@
 {{ if gt .Site.RegularPages 0}}
-{{"<!-- START LATEST POST -->" | safeHTML}}
+{{"<!-- START LATEST POST SECTION-->" | safeHTML}}
 <section id="blog" class="section bg-one">
 	<div class="container">
 		<div class="row justify-content-center">
+			{{"<!-- START LATEST POST title -->" | safeHTML}}
 			<div class="col-lg-12">
-				{{"<!-- START LATEST POST title -->" | safeHTML}}
 				<div class="title text-center wow fadeInDown">
 					<h2>{{ with i18n "blogTitle" }} {{ index (split . " ") 0 }} {{ end }}<span class="color">
 						{{ with i18n "blogTitle" }} {{ index (split . " ") 1 }} {{ end }}</span></h2>
@@ -13,22 +13,21 @@
 			</div>
 			{{"<!-- END LATEST POST title -->" | safeHTML}}
 
-			<!-- START LATEST POST for latest 3 posts -->
-
+			{{"<!-- START LATEST POST for latest 3 posts -->" | safeHTML}}
 			{{ range first 3 (where .Site.RegularPages "Section" "==" "blog")}}
 			{{ .Render "article"}}
 			{{ end }}
+			{{"<!-- END LATEST POST for latest 3 posts -->" | safeHTML}}
 
-			<!-- END LATEST POST for latest 3 posts -->
-
-			<!-- START LATEST POST btn -->
+			{{"<!-- START LATEST POST btn -->" | safeHTML}}
 			<div class="all-post text-center col-lg-12">
 				<a class="btn btn-main"
 					href="{{ `blog` | absLangURL }}">{{ i18n "viewAllPost" }}</a>
 			</div>
-			<!-- END LATEST POST btn -->
+			{{"<!-- END LATEST POST btn -->" | safeHTML}}
 		</div>
 	</div>
 </section>
 {{"<!-- END LATEST POST -->" | safeHTML}}
+
 {{ end }}
