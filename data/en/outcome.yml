@@ -7,7 +7,7 @@ outcome:
     - name : STAR-BME
       icon : ti-world # themify icon pack : https://themify.me/themify-icons
       content : Space-Time Analytics and Rendering tool – Bayesian Maximum Entropy
-      link : "https://stemlab.bse.ntu.edu.tw/wordpress/starbme/"
+      link : "/blog/2019-04-23-star-bme"
       
     # service item loop
     - name : STAMPS

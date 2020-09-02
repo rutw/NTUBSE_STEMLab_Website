@@ -1,3 +1,5 @@
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 @import 'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Poppins:wght@400;600;800&display=swap';
 :root {
 	--background-color-1: #fdfcf4;
@@ -16,7 +18,7 @@ html {
 
 body {
 	background-color: var(--background-color-1);
-	font-family: poppins, noto sans tc, sans-serif;
+	font-family: poppins, 'Noto Sans TC', sans-serif;
 	color: var(--text-color-1);
 	-webkit-font-smoothing: antialiased
 }
@@ -28,12 +30,15 @@ h4,
 h5,
 h6 {
 	font-weight: 600;
-	font-family: poppins, noto sans tc sans-serif;
+	font-family: poppins, 'Noto Sans TC' sans-serif;
 	color: var(--text-color-2)
 }
 
-p {
-	font-family: poppins, noto sans tc sans-serif;
+div, 
+p,
+li,
+span {
+	font-family: poppins, 'Noto Sans TC' sans-serif;
 	word-wrap: break-word
 }
 
@@ -352,7 +357,7 @@ a:hover {
 .header-bradcrumb .active {
 	color: #cfcfcf;
 	font-weight: 200;
-	font-family: poppins, noto sans tc sans-serif
+	font-family: poppins, 'Noto Sans TC' sans-serif
 }
 
 .header-bradcrumb a:hover {
