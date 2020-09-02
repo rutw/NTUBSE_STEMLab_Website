@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="utf-8">
+	<title>Hadoop Cluster 測試 – HDFS</title>
+
+	<!-- mobile responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="時空環境模式研究室 SpatioTemporal Environmental inforMatics Laboratory, STEMLab">
+	
+	<meta name="author" content="NTUBSE StemLab">
+	<meta name="generator" content="Hugo 0.74.3" />
+
+	<!-- plugins -->
+	
+	<link rel="stylesheet" href="https://stemlab.bse.ntu.edu.tw/plugins/bootstrap/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="https://stemlab.bse.ntu.edu.tw/plugins/themify-icons/themify-icons.css">
+	
+	<link rel="stylesheet" href="https://stemlab.bse.ntu.edu.tw/plugins/magnific-popup/magnific-popup.css">
+	
+	<link rel="stylesheet" href="https://stemlab.bse.ntu.edu.tw/plugins/slick/slick.css">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anaheim%7cNoto&#43;Sans&#43;TC:400,900%7cQuattrocento&#43;Sans:400,700&amp;display=swap">
+	
+
+	<!-- Main Stylesheet -->
+	
+	<link rel="stylesheet" href="https://stemlab.bse.ntu.edu.tw/css/style.min.css" media="screen">
+
+  	<!-- Custom stylesheet - for your changes -->
+ 	 <link rel="stylesheet" href="/css/custom.css" media="screen">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="https://stemlab.bse.ntu.edu.tw/images/logo/bldg-black-logo.png" type="image/x-icon">
+	<link rel="icon" href="https://stemlab.bse.ntu.edu.tw/images/logo/bldg-black-logo.png" type="image/x-icon">
+
+	<!--Highlight.js-->	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/styles/tomorrow.min.css">
+</head>
+
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="55">
+  <div id="content">
+    
+<!-- START PRELOADER SECTION -->
+<div class="preloader">
+  
+  <img src="https://stemlab.bse.ntu.edu.tw/images/logo/Ellipsis-1.5s-200px.svg" alt="preloader" style="max-height:100px;">
+  
+</div>
+<!-- END PRELOADER -->
+
+
+<section class="sticky-top navigation">
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<a class="navbar-brand p-0" href="/">
+				
+				<img class="img-fluid" src="https://stemlab.bse.ntu.edu.tw/images/logo/stemlab-bldg-white-logo.png" alt="STEMLab 時空環境模式研究室 - SpatioTemporal Environmental InforMatics Laboratory -" style="max-height:40px;">
+				
+			</a>
+
+			<button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navigation">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="#body">Home</a></li>
+					
+					
+					<li class="nav-item"><a class="nav-link" href="/#about">About</a>
+					</li>
+					
+					<li class="nav-item"><a class="nav-link" href="/#outcome">Outcome</a>
+					</li>
+					
+					<li class="nav-item"><a class="nav-link" href="/#advisor">Advisor</a>
+					</li>
+					
+					<li class="nav-item"><a class="nav-link" href="/#member">Member</a>
+					</li>
+					
+					<li class="nav-item"><a class="nav-link" href="/#blog">Blog</a>
+					</li>
+					
+					<li class="nav-item"><a class="nav-link" href="/#activity">Activity</a>
+					</li>
+					
+					<li class="nav-item"><a class="nav-link" href="/#contact">Contact</a>
+					</li>
+					
+					
+					
+						
+				</ul>			
+			</div>
+		</nav>
+	</div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <h1>Hadoop Cluster 測試 – HDFS</h1>
+        <ul class="list-inline mb-50">
+          
+          <li class="list-inline-item">2019, Apr 17, Wednesday</li>
+        </ul>
+        <hr>
+        
+      </div>
+      <div class="col-lg-8 offset-lg-2">
+        <div class="post-single-content">
+          <p>在各 Node 上，必須先確認其 IP 與 hostname</p>
+<p>可下指令修改 hostname</p>
+<pre><code>sudo hostnamectl set-hostname vm1
+</code></pre><p>再利用指令尋找 Node 的 IP</p>
+<pre><code>ip addr
+</code></pre><p><img src="/images/blog/HDFS/1.png" alt=""></p>
+<p>如下圖已修改 hostname 為 vm1，且得知 IP 為 192.168.56.102</p>
+<p>將 IP 位置與命名加入各 node 的 /etc/hosts 檔案中</p>
+<p><img src="/images/blog/HDFS/2.png" alt=""></p>
+<p>在各個 node 加入名為 hadoop 的使用者，並設定密碼</p>
+<pre><code>sudo -u root useradd hadoop
+sudo -u root passwd hadoop
+</code></pre><p>以 hadoop 使用者登入主要的 node，並建立 ssh key</p>
+<pre><code>ssh-keygen -t rsa (一路 ENTER 下去）
+</code></pre><p>再把 ssh key 送到各個 node 上</p>
+<pre><code>ssh-copy-id hadoop@vm0
+ssh-copy-id hadoop@vm1
+</code></pre><p><img src="/images/blog/HDFS/3.png" alt=""></p>
+<p>用 hadoop ssh 登入 vm0，並下載 hadoop，解壓，與重新命名 binary： <a href="http://ftp.tc.edu.tw/pub/Apache/hadoop/common/hadoop-3.1.2/hadoop-3.1.2.tar.gz">http://ftp.tc.edu.tw/pub/Apache/hadoop/common/hadoop-3.1.2/hadoop-3.1.2.tar.gz</a></p>
+<pre><code>wget http://ftp.tc.edu.tw/pub/Apache/hadoop/common/hadoop-3.1.2/hadoop-3.1.2.tar.gz
+tar -xzf hadoop-3.1.2.tar.gz
+mv hadoop-3.1.2 hadoop
+</code></pre><p><img src="/images/blog/HDFS/4.png" alt=""></p>
+<p>調整 JAVA_HOME 至 /usr/lib/jvm/jre</p>
+<pre><code>vi hadoop/etc/hadoop/hadoop-env.sh
+</code></pre><p><img src="/images/blog/HDFS/5.png" alt=""></p>
+<p>在各 Node 設定 NameNode （~/hadoop/etc/hadoop/core-site.xml)</p>
+<pre><code>vi ~/hadoop/etc/hadoop/core-site.xml
+</code></pre><p><img src="/images/blog/HDFS/6.png" alt=""></p>
+<p>同樣的，設定 HDFS Path</p>
+<p><img src="/images/blog/HDFS/7.png" alt=""></p>
+<p>設定 yarn</p>
+<pre><code>vi ~/hadoop/etc/hadoop/mapred-site.xml
+</code></pre><p><img src="/images/blog/HDFS/8.png" alt=""></p>
+<pre><code>vi ~/hadoop/etc/hadoop/yarn-site.xml
+</code></pre><p><img src="/images/blog/HDFS/9.png" alt=""></p>
+<p>設定 workers</p>
+<pre><code>vi ~/hadoop/etc/hadoop/workers
+</code></pre><p><img src="/images/blog/HDFS/10.png" alt=""></p>
+<p>設定記憶體相關（DEFAULT 值給 8G RAM 用的）</p>
+<pre><code>vi ~/hadoop/etc/hadoop/yarn-site.xml
+</code></pre><p><img src="/images/blog/HDFS/11.png" alt=""></p>
+<pre><code>vi ~/hadoop/etc/hadoop/mapred-site.xml
+</code></pre><p><img src="/images/blog/HDFS/12.png" alt=""></p>
+<p>致此，設定完成</p>
+<p>將相關的設定檔案 COPY 至每個 Node</p>
+<pre><code>scp hadoop-*.tar.gz vm1:/home/hadoop
+</code></pre><p><img src="/images/blog/HDFS/13.png" alt=""></p>
+<p>SSH 連進 Node</p>
+<pre><code>ssh vm1
+</code></pre><p><img src="/images/blog/HDFS/14.png" alt=""></p>
+<p>解壓，重命名，然後離開</p>
+<pre><code>tar -xzf hadoop-3.1.2.tar.gz
+mv hadoop-2.8.1 hadoop
+exit
+</code></pre><p><img src="/images/blog/HDFS/15.png" alt=""></p>
+<pre><code>for node in node1 node2; do
+scp ~/hadoop/etc/hadoop/* $node:/home/hadoop/hadoop/etc/hadoop/;
+done
+</code></pre><p><img src="/images/blog/HDFS/16.png" alt=""></p>
+<p>格式化 HDFS (在 vm0 上） hadoop/bin/hdfs namenode -format</p>
+<p><img src="/images/blog/HDFS/17.png" alt=""></p>
+<p>然後啟動 HDFS</p>
+<pre><code>hadoop/sbin/start-dfs.sh
+</code></pre><p><img src="/images/blog/HDFS/18.png" alt=""></p>
+<p>可連上網頁觀看 http://vm0:9870</p>
+<p><img src="/images/blog/HDFS/19.png" alt=""></p>
+<p>此至，HDFS 設定完成</p>
+
+        </div>
+        
+        <div class="mt-5">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  </div><!-- START FOOTER LOGO AND COPYRIGHT SECTION-->
+<footer id="footer" class="section section-bg" style="padding: 0px 0;">
+	<div class="container">
+		<div class="row wow fadeInUp" data-wow-duration="500ms">
+			<div class="col-xl-12">
+				<div class="copyright text-center">
+					<!-- START FOOTER LOGO -->
+					<a href="https://stemlab.bse.ntu.edu.tw/">
+						<img class = "my-auto"  src="https://stemlab.bse.ntu.edu.tw/images/logo/stemlab-bldg-black-logo.png" alt="STEMLab 時空環境模式研究室 - SpatioTemporal Environmental InforMatics Laboratory -" style="max-height:50px;">
+					</a>
+					<!-- END FOOTER LOGO -->
+
+					<br>
+
+					<!-- START COPYRIGHT -->
+					<p>Copyright &copy; 2020 <a href="http://www.bse.ntu.edu.tw/"  target="_blank">NTUBSE</a> STEMLab - SpatioTemporal Environmental InforMatics Laboratory - </p>
+					<!-- Designed by Ho Ching-Ru (Contact Info: chingru.me), Moduled from Meghna (Hugo) -->
+					<!-- END COPYRIGHT -->
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- END FOOTER LOGO AND COPYRIGHT -->
+
+<!-- JS Plugins -->
+
+<script src="https://stemlab.bse.ntu.edu.tw/plugins/jquery/jquery.min.js"></script>
+
+<script src="https://stemlab.bse.ntu.edu.tw/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://stemlab.bse.ntu.edu.tw/plugins/slick/slick.min.js"></script>
+
+<script src="https://stemlab.bse.ntu.edu.tw/plugins/shuffle/shuffle.min.js"></script>
+
+<script src="https://stemlab.bse.ntu.edu.tw/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<script src="https://stemlab.bse.ntu.edu.tw/plugins/lazy-load/lozad.min.js"></script>
+
+<script src="https://stemlab.bse.ntu.edu.tw/plugins/google-map/map.js"></script>
+
+
+<!-- Highlight.js Plugins -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js"></script>
+
+<script charset="UTF-8"
+src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/languages/go.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- Main Script -->
+
+<script src="https://stemlab.bse.ntu.edu.tw/js/script.min.js"></script>
+
+<!-- Google Analitycs -->
+</body>
+
+</html>

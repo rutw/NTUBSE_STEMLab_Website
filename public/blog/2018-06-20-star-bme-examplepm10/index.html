@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="utf-8">
+	<title>STAR-BME Example(PM10)</title>
+
+	<!-- mobile responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="時空環境模式研究室 SpatioTemporal Environmental inforMatics Laboratory, STEMLab">
+	
+	<meta name="author" content="NTUBSE StemLab">
+	<meta name="generator" content="Hugo 0.74.3" />
+
+	<!-- plugins -->
+	
+	<link rel="stylesheet" href="https://stemlab.bse.ntu.edu.tw/plugins/bootstrap/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="https://stemlab.bse.ntu.edu.tw/plugins/themify-icons/themify-icons.css">
+	
+	<link rel="stylesheet" href="https://stemlab.bse.ntu.edu.tw/plugins/magnific-popup/magnific-popup.css">
+	
+	<link rel="stylesheet" href="https://stemlab.bse.ntu.edu.tw/plugins/slick/slick.css">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anaheim%7cNoto&#43;Sans&#43;TC:400,900%7cQuattrocento&#43;Sans:400,700&amp;display=swap">
+	
+
+	<!-- Main Stylesheet -->
+	
+	<link rel="stylesheet" href="https://stemlab.bse.ntu.edu.tw/css/style.min.css" media="screen">
+
+  	<!-- Custom stylesheet - for your changes -->
+ 	 <link rel="stylesheet" href="/css/custom.css" media="screen">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="https://stemlab.bse.ntu.edu.tw/images/logo/bldg-black-logo.png" type="image/x-icon">
+	<link rel="icon" href="https://stemlab.bse.ntu.edu.tw/images/logo/bldg-black-logo.png" type="image/x-icon">
+
+	<!--Highlight.js-->	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/styles/tomorrow.min.css">
+</head>
+
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="55">
+  <div id="content">
+    
+<!-- START PRELOADER SECTION -->
+<div class="preloader">
+  
+  <img src="https://stemlab.bse.ntu.edu.tw/images/logo/Ellipsis-1.5s-200px.svg" alt="preloader" style="max-height:100px;">
+  
+</div>
+<!-- END PRELOADER -->
+
+
+<section class="sticky-top navigation">
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<a class="navbar-brand p-0" href="/">
+				
+				<img class="img-fluid" src="https://stemlab.bse.ntu.edu.tw/images/logo/stemlab-bldg-white-logo.png" alt="STEMLab 時空環境模式研究室 - SpatioTemporal Environmental InforMatics Laboratory -" style="max-height:40px;">
+				
+			</a>
+
+			<button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navigation">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="#body">Home</a></li>
+					
+					
+					<li class="nav-item"><a class="nav-link" href="/#about">About</a>
+					</li>
+					
+					<li class="nav-item"><a class="nav-link" href="/#outcome">Outcome</a>
+					</li>
+					
+					<li class="nav-item"><a class="nav-link" href="/#advisor">Advisor</a>
+					</li>
+					
+					<li class="nav-item"><a class="nav-link" href="/#member">Member</a>
+					</li>
+					
+					<li class="nav-item"><a class="nav-link" href="/#blog">Blog</a>
+					</li>
+					
+					<li class="nav-item"><a class="nav-link" href="/#activity">Activity</a>
+					</li>
+					
+					<li class="nav-item"><a class="nav-link" href="/#contact">Contact</a>
+					</li>
+					
+					
+					
+						
+				</ul>			
+			</div>
+		</nav>
+	</div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <h1>STAR-BME Example(PM10)</h1>
+        <ul class="list-inline mb-50">
+          
+          <li class="list-inline-item">2018, Jun 20, Wednesday</li>
+        </ul>
+        <hr>
+        
+      </div>
+      <div class="col-lg-8 offset-lg-2">
+        <div class="post-single-content">
+          <h2 id="taipei-pm10-example">Taipei PM10 Example</h2>
+<ol>
+<li>Set CRS(Coordinate Reference System)
+Select WGS84(EPSG:4326) in “Coordinate Reference System Selector”</li>
+<li>Specify data
+Specify Hard data and Soft data in “Specify Data” window
+i. Hard data
+Select “PM10_105_taipei.csv” from downloaded example file under “/data”</li>
+</ol>
+<p>After import hard data and soft data. BMEobj will be created, hard data will be load in QGIS.</p>
+<p><img src="/images/blog/STARBME-PM10/1.png" alt=""></p>
+<p>Time View of hard data</p>
+<p><img src="/images/blog/STARBME-PM10/2.png" alt=""></p>
+<p>Hard data (circle) and is showed. From figure2.1, color bar and time bar of data are showed on the left and below of figure.</p>
+<ol start="3">
+<li>
+<p>Compute Trend and Residual From Data
+User can choose “No Detrending”, “Kernel Smoothing” or “STmean” in this step. In this example, we will use “STMean”.</p>
+</li>
+<li>
+<p>Covariance Analysis</p>
+</li>
+</ol>
+<p>4.1 Empirical Covariance Estimation
+For this case, we will set:
+Spatial Distance Limit: 0.1179 ,Temporal Distance Limit: 11700.0
+Number of Spatial Lags:8, Number of Temporal Lags:8
+Spatial Lag Tolerance:0.01684, Spatial Temporal Tolerance: 1671.0</p>
+<p><img src="/images/blog/STARBME-PM10/3.png" alt=""></p>
+<p>And press “Plot Empirical Covariance”.</p>
+<p>4.2 Covariance Model Fitting
+In this case, we will use “Exponential” to fit covariance. After fitting covariance, 2D and 3D Fit covariance will be plotted.
+Nest Number = 2
+Fit Covariance Model
+C1 =1.164, S1 = 0.05624, T1 =3326
+C2 = 0.1365, S2 = 0.03682, T2 = 1861</p>
+<p><img src="/images/blog/STARBME-PM10/4.png" alt=""></p>
+<ol start="5">
+<li>
+<p>Prediction
+Specify location: For this case, we use “Grid Input”, which STARBME will generate grid coordinate for predict. Press “Predict” for predict the coordinate that generate by “Grid Input”, we will set coordinate boundary by select “ Set By Data Boundary”
+For Grid Input,
+Xn = 80
+Yn = 80
+Tmin = 0, Tmax = 100, Tn = 101
+For Predict,
+Order = ZeroMean
+Spatial Range = 0.01
+Temporal Range = 3326.0
+Spatial/Temporal Ratio = 58500.0
+Nhmax = 5, nsmax = 0</p>
+</li>
+<li>
+<p>Output result
+Specify Task for result: Add Result to QGIS.</p>
+</li>
+</ol>
+
+        </div>
+        
+        <div class="mt-5">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  </div><!-- START FOOTER LOGO AND COPYRIGHT SECTION-->
+<footer id="footer" class="section section-bg" style="padding: 0px 0;">
+	<div class="container">
+		<div class="row wow fadeInUp" data-wow-duration="500ms">
+			<div class="col-xl-12">
+				<div class="copyright text-center">
+					<!-- START FOOTER LOGO -->
+					<a href="https://stemlab.bse.ntu.edu.tw/">
+						<img class = "my-auto"  src="https://stemlab.bse.ntu.edu.tw/images/logo/stemlab-bldg-black-logo.png" alt="STEMLab 時空環境模式研究室 - SpatioTemporal Environmental InforMatics Laboratory -" style="max-height:50px;">
+					</a>
+					<!-- END FOOTER LOGO -->
+
+					<br>
+
+					<!-- START COPYRIGHT -->
+					<p>Copyright &copy; 2020 <a href="http://www.bse.ntu.edu.tw/"  target="_blank">NTUBSE</a> STEMLab - SpatioTemporal Environmental InforMatics Laboratory - </p>
+					<!-- Designed by Ho Ching-Ru (Contact Info: chingru.me), Moduled from Meghna (Hugo) -->
+					<!-- END COPYRIGHT -->
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- END FOOTER LOGO AND COPYRIGHT -->
+
+<!-- JS Plugins -->
+
+<script src="https://stemlab.bse.ntu.edu.tw/plugins/jquery/jquery.min.js"></script>
+
+<script src="https://stemlab.bse.ntu.edu.tw/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://stemlab.bse.ntu.edu.tw/plugins/slick/slick.min.js"></script>
+
+<script src="https://stemlab.bse.ntu.edu.tw/plugins/shuffle/shuffle.min.js"></script>
+
+<script src="https://stemlab.bse.ntu.edu.tw/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<script src="https://stemlab.bse.ntu.edu.tw/plugins/lazy-load/lozad.min.js"></script>
+
+<script src="https://stemlab.bse.ntu.edu.tw/plugins/google-map/map.js"></script>
+
+
+<!-- Highlight.js Plugins -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js"></script>
+
+<script charset="UTF-8"
+src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/languages/go.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- Main Script -->
+
+<script src="https://stemlab.bse.ntu.edu.tw/js/script.min.js"></script>
+
+<!-- Google Analitycs -->
+</body>
+
+</html>
