@@ -2,8 +2,8 @@
 
 {{ if $data.activity.activity.enable }}
 {{ with $data.activity.activity }}
-{{"<!-- activity Section -->" | safeHTML}}
-<section class="activity section" id="activity">
+{{"<!-- START ACTIVITY SECTION -->" | safeHTML}}
+<section class="activity bg-one section-bg section" id="activity">
 	<div class="container">
 		<div class="row ">
 			<div class="col-xl-12">
@@ -65,6 +65,6 @@
 		</div>
 	</div>
 </section>
-{{"<!-- /activity -->" | safeHTML}}
+{{"<!-- /END activity SECTION -->" | safeHTML}}
 {{ end }}
 {{ end }}

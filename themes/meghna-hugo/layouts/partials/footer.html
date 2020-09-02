@@ -1,21 +1,24 @@
-{{"<!-- end Contact Area -->" | safeHTML}}
-<footer id="footer" class="section bg-one" style="padding: 0px 0;">
+{{"<!-- START FOOTER LOGO AND COPYRIGHT -->" | safeHTML}}
+<footer id="footer" class="section section-bg" style="padding: 0px 0;">
 	<div class="container">
 		<div class="row wow fadeInUp" data-wow-duration="500ms">
 			<div class="col-xl-12">
-				{{"<!-- copyright -->" | safeHTML}}
+				{{"<!-- START FOOTER LOGO -->" | safeHTML}}
 				<div class="copyright text-center">
 					<a href="{{ .Site.BaseURL | absLangURL }}">
 						<img class = "my-auto"  src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" style="max-height:50px;">
 					</a>
+					<!-- END FOOTER LOGO -->
 					<br>
+					<!-- START COPYRIGHT -->
 					<p>Copyright &copy; {{ now.Year }} <a href="http://www.bse.ntu.edu.tw/"  target="_blank">NTUBSE</a> STEMLab - SpatioTemporal Environmental InforMatics Laboratory - </p>
+					<!-- END COPYRIGHT -->
 				</div>
 			</div>
 		</div>
 	</div>
 </footer>
-{{"<!-- /footer -->" | safeHTML}}
+{{"<!-- END FOOTER LOGO AND COPYRIGHT -->" | safeHTML}}
 
 {{ "<!-- JS Plugins -->" | safeHTML }}
 {{ range .Site.Params.plugins.js}}

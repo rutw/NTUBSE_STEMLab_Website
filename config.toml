@@ -47,8 +47,8 @@ URL = "about"
 weight = 1
 
 [[menu.main]]
-name = "Achievements"
-URL = "achievements"
+name = "Outcome"
+URL = "outcome"
 weight = 2
 
 [[menu.main]]
@@ -79,7 +79,8 @@ weight = 7
 
 ############################# Default Parameters ##########################
 [params]
-logo = "images/logo/stemlab-bldg-white-logo.png"
+logo = "images/logo/stemlab-bldg-black-logo.png"
+whitelogo =  "images/logo/stemlab-bldg-white-logo.png"
 fulllogo = "images/logo/stemlab-fullname-white-logo.png"
 # Meta data
 description = "時空環境模式研究室 SpatioTemporal Environmental inforMatics Laboratory, STEMLab"

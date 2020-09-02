@@ -10,4 +10,11 @@ activity:
       categories : ["聚餐"]
       content : 聚餐
       link : 
-      
+
+    - name : 一日遊
+      image : images/activity/一日遊1024x578.jpg
+      image_webp : 
+      categories : ["出遊"]
+      content : 一日遊
+      link : 
+        

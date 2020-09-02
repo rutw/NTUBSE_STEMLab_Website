@@ -1,8 +1,8 @@
 ################################# Service #################################
-achievements:
+outcome:
   enable : true
-  title : Research Achievements
-  achievements_item :
+  title : Research Outcome
+  outcome_item :
     # service item loop
     - name : STAR-BME
       icon : ti-world # themify icon pack : https://themify.me/themify-icons
@@ -23,13 +23,13 @@ achievements:
       
     # service item loop
     - name : 空氣盒子
-      icon : ti-palette # themify icon pack : https://themify.me/themify-icons
+      icon : ti-package # themify icon pack : https://themify.me/themify-icons
       content : 空氣盒子累計圖
       link : "http://140.112.76.215/STEMLab/air_box/"
 
     # service item loop
     - name : 時空間繪圖
-      icon : ti-package # themify icon pack : https://themify.me/themify-icons
+      icon : ti-palette # themify icon pack : https://themify.me/themify-icons
       content : 時空間繪圖
       link : "http://140.112.76.215/STEMLab/stdraw/"
 

@@ -4,9 +4,9 @@
       <img class="img-fluid lozad" data-src="{{ .Params.Image_webp | absURL }}" onerror="this.onerror=null;this.src='{{ .Params.Image | absURL }}'">
     </div>
 
-    <div class="content">
+    <div class="content section-bg">
       <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-      <p>{{ dateFormat "2006, Jan 2" .Date }}</p>
+      <p>{{ dateFormat "Jan 2, 2006" .Date }}</p>
       <hr>
       <p>{{ .Summary }}</p>
       <a class="btn btn-transparent" href="{{ .Permalink }}">{{ i18n "readMore" }}</a>

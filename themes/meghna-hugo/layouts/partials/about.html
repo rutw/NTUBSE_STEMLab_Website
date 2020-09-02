@@ -2,23 +2,29 @@
 
 {{ if $data.about.about.enable }}
 {{ with $data.about.about }}
-{{"<!-- about -->" | safeHTML}}
-<section class="section section-bg about-2 padding-0" id="about">
+{{"<!-- START ABOUT US -->" | safeHTML}}
+<section class="section about-2 padding-0" id="about">
 	<div class="container-fluid">
 
-	<div class="title text-center wow fadeIn section" data-wow-duration="1500ms">
+	<!-- START ABOUT US title -->
+	<div class="title text-center wow fadeIn section bg-one" data-wow-duration="1500ms">
 				<h2> {{ with .section_title }} {{ index (split . " ") 0 }} {{ end }}<span class="color">
 							{{ with .section_title }} {{ index (split . " ") 1 }} {{ end }} </span></h2>
 					<div class="border-meghna"></div>
 				</div>
+	<!-- END ABOUT US title -->
 
+
+	<!-- START ABOUT US photo -->
 		<div class="row">
 			<div class="col-lg-6 padding-0" style="background-image: url('{{ .image_webp | absURL }}'); background-size: cover; background-position: top center; background-repeat: no-repeat; min-height: 400px;">
 			<!-- this image is for trigger this section fallback background image -->
 			<img style="display: none;" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url({{ .image | absURL }})'" src="{{ .image_webp | absURL }}" />
 			</div>
+	<!-- END ABOUT US photo -->
+		
 
-			
+	<!-- START ABOUT US contents -->	
 			<div class="col-lg-6 padding-0">
 				<div class="bg-one content-block">
 					<h2>{{ .title | markdownify }}</h2>
@@ -35,7 +41,7 @@
 								</div>
 								{{ end }}
 								<div class="media-body">
-									<h4 class="media-heading">{{ .title | markdownify }}</h4>
+									<h4 class="media-heading my-auto">{{ .title | markdownify }}</h4>
 									<p>{{ .content | markdownify }}</p>
 								</div>
 							</div>
@@ -47,9 +53,10 @@
 					<p>{{ .content_3 | markdownify }}</p>
 				</div>
 			</div>
+			<!-- END ABOUT US contents -->
 		</div>
 	</div>
 </section>
-{{"<!-- /about -->" | safeHTML}}
+{{"<!-- END ABOUT US -->" | safeHTML}}
 {{ end }}
 {{ end }}

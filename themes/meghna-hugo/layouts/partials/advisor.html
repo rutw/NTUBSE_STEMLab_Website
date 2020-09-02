@@ -2,11 +2,11 @@
 
 {{ if $data.advisor.advisor.enable }}
 {{ with $data.advisor.advisor }}
-{{"<!-- advisor -->" | safeHTML }}
-<section id="advisor" class="parallax-section section section-bg overly">
+{{"<!-- START LAB ADVISOR -->" | safeHTML }}
+<section id="advisor" class="parallax-section section">
 	<div class="container">
 		<div class="row">
-			{{"<!-- section title -->" | safeHTML }}
+			{{"<!-- START LAB ADVISOR title -->" | safeHTML }}
 			<div class="col-lg-12">
 				<div class="title text-center">
 					<h2>{{ with .title }} {{ index (split . " ") 0 }} {{ end }}<span class="color">
@@ -14,8 +14,9 @@
 					<div class="border-meghna"></div>
 				</div>
 			</div>
-			{{"<!-- /section title -->" | safeHTML }}
+			{{"<!-- END LAB ADVISOR title -->" | safeHTML }}
 		</div>
+		<!-- START LAB ADVISOR content -->
 		<div class="row">
 			<div class="col-lg-6">				
 				{{ with .image }}
@@ -24,7 +25,7 @@
 				<div class="pt-5">					
 					<div class="con-info clearfix">
 						<i class="ti-user"></i>
-						<span>Citations: <a href="https://scholar.google.com/citations?user=X3zGlpIAAAAJ&amp;hl=en"  target="_blank">Google Scholar</a></span>
+						<span>Citations: <a href="https://scholar.google.com/citations?user=X3zGlpIAAAAJ&amp;hl=en"  target="_blank">Google Scholar Page</a></span>
 					</div>					
 					<div class="con-info clearfix">
 						<i class="ti-email"></i>
@@ -32,7 +33,7 @@
 					</div>					
 					<div class="con-info clearfix">
 						<i class="ti-mobile"></i>
-						<span>Phone: 02-33663454</span>
+						<span>Office: 02-33663454</span>
 					</div>
 					
 				</div>
@@ -67,8 +68,9 @@
 				</ul>
 			</div>
 		</div>
+		<!-- END LAB ADVISOR content -->
 	</div>
 </section>
-{{"<!-- /advisor -->" | safeHTML }}
+{{"<!-- END LAB ADVISOR -->" | safeHTML }}
 {{ end }}
 {{ end }}
